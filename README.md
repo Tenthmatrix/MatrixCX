@@ -32,6 +32,6 @@ The matrixcx-dashboard is a main dashboard for admin, back office web users via 
 
 For more information please visit https://matrixcx.org
 
-MatrixCX and MatrixCX-Dashboard are development from ground up to run in containerised environments and it can be easily run in a containerised environments such as Docker and Kubernetes.
+MatrixCX and MatrixCX-Dashboard are developed from ground up to run in containerised environments and it can be easily run in a containerised environments such as Docker and Kubernetes.
 
 
