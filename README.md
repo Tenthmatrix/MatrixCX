@@ -1,4 +1,4 @@
-# MatrixCX-Dashboard
+# MatrixCX - A Matrix of software apps for better customer experience (CX)
 
 ------------------------------------------------------
 
@@ -14,7 +14,7 @@ The MatrixCX is a Cloud Native Open Source Software written in node.js and mongo
 
 The following Matrixcx modules are currently shipped in the version 1.0.0 build 2020011 beta:
 
-- MatrixCX-Dashboard (Dashboard - The Core Module, starting point)
+- MatrixCX-Dashboard (Dashboard - The Core Module, This should be your starting point...)
 - Content Management System Module (CMS Module)
 - Job board, ATS with (Applicant Tracking Module) - (Job board Module)
 - Recruitment Management Module (Extending Job board Module to manage entire Recruitment business)
