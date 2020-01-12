@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: bwalia/matrixcx-dashboard:latest
+          image: bwalia/matrixcx-dashboard-js:latest
           resources:
             limits:
               memory: "750Mi"
