@@ -14,10 +14,11 @@ The MatrixCX is a Cloud Native Open Source Software written in node.js and mongo
 
 The following Matrixcx modules are currently shipped in the version 1.0.0 build 2020011 beta:
 
-- MatrixCX-Dashboard (Dashboard - Module To Access the Core Module, This should be your starting point...)
-- Content Management System Module (CMS Module)
-- Job board, ATS with (Applicant Tracking Module) - (Job board Module)
-- Recruitment Management Module (Extending Job board Module to manage entire Recruitment business)
+- MatrixCX-Dashboard - A powerful Dashboard Module To Access the Core System, *** This should be your starting point... ***
+- MatrixCX-CMS - Content Management System Module (CMS Module)
+- MatrixCX-ATS - Job board, ATS with (Applicant Tracking Module) - (Job board Module)
+- MatrixCX-Recruitment - Recruitment Management Module (Extending Job board Module to manage entire Recruitment business)
+- MatrixCX-Website - A simple yet powerful way to host and manage your Marketing Blog or a website using powerful backend admin module MatrixCX-CMS
 
 Under development Modules are as follows:
 
@@ -32,6 +33,6 @@ The MatrixCX-Dashboard is a main dashboard for admin, back office web users via 
 
 For more information please visit https://matrixcx.org
 
-MatrixCX and MatrixCX-Dashboard are developed from ground up to run in containerised environments and it can be easily run in a containerised environments such as Docker and Kubernetes. It follows the principles of Microservices strictly and each Module or Application of MatrixCX can be deployed, managed in a true Microservices model. 
+MatrixCX and Modules such as MatrixCX-Dashboard & MatrixCX-Website are developed from ground up to run in containerised environments and it can be easily run in a containerised environments such as Docker and Kubernetes. It follows the principles of Microservices strictly and each Module or Application of MatrixCX can be deployed, managed in a true Microservices model. 
 
 
