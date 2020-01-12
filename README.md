@@ -57,7 +57,7 @@ kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1
 
 
 # Setup development namespace
-kubectl create -f https://raw.githubusercontent.com/Tenthmatrix/MatrixCX/matrixcx-dashboard-kubernetes/kube/matrixcx-dev-namespaces.json
+kubectl create -f https://raw.githubusercontent.com/Tenthmatrix/MatrixCX/master/matrixcx-dashboard-kubernetes/kube/matrixcx-dev-namespaces.json
 
 matrixcx-dev-namespaces.json
 
