@@ -36,3 +36,9 @@ For more information please visit https://matrixcx.org
 MatrixCX and Modules such as MatrixCX-Dashboard & MatrixCX-Website are developed from ground up to run in containerised environments and it can be easily run in a containerised environments such as Docker and Kubernetes. It follows the principles of Microservices strictly and each Module or Application of MatrixCX can be deployed, managed in a true Microservices model. 
 
 
+How to Install MatrixCX Dashboard in kubernetes cluster in dev environment?
+
+- Set namespaces
+
+
+
