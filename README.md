@@ -14,16 +14,16 @@ The MatrixCX is a Cloud Native Open Source Software written in node.js and mongo
 
 The following Matrixcx modules are currently shipped in the version 1.0.0 build 2020011 beta:
 
-- MatrixCX-Dashboard - A powerful Dashboard Module To Access the Core System, *** This should be your starting point... ***
-- MatrixCX-CMS - Content Management System Module (CMS Module)
-- MatrixCX-ATS - Job board, ATS with (Applicant Tracking Module) - (Job board Module)
-- MatrixCX-Recruitment - Recruitment Management Module (Extending Job board Module to manage entire Recruitment business)
-- MatrixCX-Website - A simple yet powerful way to host and manage your Marketing Blog or a website using powerful backend admin module MatrixCX-CMS
+# - MatrixCX-Dashboard - A powerful Dashboard Module To Access the Core System, *** This should be your starting point... ***
+# - MatrixCX-CMS - Content Management System Module (CMS Module)
+# - MatrixCX-ATS - Job board, ATS with (Applicant Tracking Module) - (Job board Module)
+# - MatrixCX-Recruitment - Recruitment Management Module (Extending Job board Module to manage entire Recruitment business)
+# - MatrixCX-Website - A simple yet powerful way to host and manage your Marketing Blog or a website using powerful backend admin module MatrixCX-CMS
 
-Under development Modules are as follows:
+# Under development Modules are as follows:
 
-- Online Shop (eCommerce Module)
-- Sales Orders, Sales Invoices, Purchase Orders, Purchase Invoices (CRM Core Business Module)
+# - Online Shop (eCommerce Module)
+# - Sales Orders, Sales Invoices, Purchase Orders, Purchase Invoices (CRM Core Business Module)
 
 MatrixCX-Dashboard is a main component to access the core of the Matrixcx system using WebUI.
 
@@ -36,9 +36,76 @@ For more information please visit https://matrixcx.org
 MatrixCX and Modules such as MatrixCX-Dashboard & MatrixCX-Website are developed from ground up to run in containerised environments and it can be easily run in a containerised environments such as Docker and Kubernetes. It follows the principles of Microservices strictly and each Module or Application of MatrixCX can be deployed, managed in a true Microservices model. 
 
 
-How to Install MatrixCX Dashboard in kubernetes cluster in dev environment?
+How to Install MatrixCX Dashboard in kubernetes cluster in dev environment using kubectl?
 
-- Set namespaces
+# Setup development namespace
+kubectl create -f /Users/balinderwalia/matrixcx/matrixcx-dashboard-kubernetes/kube/matrixcx-dev-namespaces.json
+
+matrixcx-dev-namespaces.json
+
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "name": "development",
+    "labels": {
+      "name": "development"
+    }
+  }
+}
+
+# Start MatrixCX Dashboard in kubernetes development namespace using matrixcx-dashbaord lastest public image from Docker Hub
+
+kubectl create -f https://raw.githubusercontent.com/Tenthmatrix/MatrixCX/master/matrixcx-dashboard-kubernetes/kube/matrixcx.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: matrixcx-dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: matrixcx-dashboard
+  template:
+    metadata:
+      labels:
+        app: matrixcx-dashboard
+    spec:
+      containers:
+        - name: app
+          image: bwalia/matrixcx-dashboard-js:latest
+          resources:
+            limits:
+              memory: "750Mi"
+            requests:
+              memory: "500Mi"
+          ports:
+            - containerPort: 3015
+          imagePullPolicy: Always
+          env:
+            - name: MONGO_DB
+              value: "jobshout_live"
+            - name: MONGO_HOST
+              value: "mongo-prod.tenthmatrix.co.uk"
+            - name: MONGO_PORT
+              value: "27017"
+            - name: MONGO_URL
+              value: "mongodb://mongo-prod.tenthmatrix.co.uk:27017/jobshout_live"
+            - name: MONGO_HISTORY_URL
+              value: "mongodb://mongo-prod.tenthmatrix.co.uk:27017/jobshout_live_history"
+
+# Wait for the pods to be up and running by watching pods using kubectl
+
+kubectl get pods --all-namespaces --watch or if running via Bash sleep for 10 seconds
+
+sleep 10
+
+When the MatrixCX Dashboard pods are running let's expose those pods as a service:
+
+kubectl apply -f https://raw.githubusercontent.com/Tenthmatrix/MatrixCX/master/matrixcx-dashboard-kubernetes/kube/matrixcx-service.yaml
+
+
 
 
 
