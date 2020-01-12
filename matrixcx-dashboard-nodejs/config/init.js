@@ -19,9 +19,9 @@ const dashboardHost = process.env.MATRIXCX_DASHBOARD_HOST || 'localhost'
 const dashboardPort = process.env.MATRIXCX_DASHBOARD_PORT || 3015
 const dashboardDir = process.env.MATRIXCX_DASHBOARD_HOST || 'matrixcx-dashboard'
 
-const appHost = process.env.FRONTEND_APP_HOST || 'localhost'
-const appPort = process.env.FRONTEND_APP_PORT || 3005
-const systemSiteID = process.env.FRONTEND_APP_GUID || "5947ccfb8b69ec720d5814d4"
+const appHost = process.env.MATRIXCX_WEBSITE_HOST || 'localhost'
+const appPort = process.env.MATRIXCX_WEBSITE_PORT || 3005
+const systemSiteID = process.env.MATRIXCX_WEBSITE_GUID || "5947ccfb8b69ec720d5814d4"
 
 const mongoPort = process.env.MONGO_PORT || 27017
 const mongoDB = process.env.MONGO_DB || 'matrixcx'
