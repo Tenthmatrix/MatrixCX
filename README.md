@@ -4,7 +4,7 @@
 
 What is MatrixCX?
 
-MatrixCX is a “Matrix“ of cloud based business software applications and modules for better customer experience (CX). It follows the SAAS model for simplicity, extensibility and portability. In commerce, customer experience (CX) is the product of an interaction between an organization and a customer over the duration of their relationship.
+MatrixCX is a “Matrix“ of cloud based business software applications and modules for better customer experience (CX). It follows the SAAS model for simplicity, extensibility and portability and the modules are developed in the pure microservices model to simplify development, maintainance and use of the MatrixCX apps. In commerce, customer experience (CX) is the product of an interaction between an organization and a customer over the duration of their relationship.
 
 Why did MatrixCX was created?
 
@@ -14,9 +14,9 @@ The MatrixCX is a Cloud Native Open Source Software written in node.js and mongo
 
 The following Matrixcx modules are currently shipped in the version 1.0.0 build 2020011 beta:
 
-- MatrixCX-Dashboard (Dashboard - The Core Module, This should be your starting point...)
-- Content Management System Module (CMS Module)
-- Job board, ATS with (Applicant Tracking Module) - (Job board Module)
+- MatrixCX-Dashboard (Dashboard - Module To Access the Core Microservice, This should be your starting point...)
+- Content Management System Module (CMS Microservice)
+- Job board, ATS with (Applicant Tracking Module) - (Job board Microservice)
 - Recruitment Management Module (Extending Job board Module to manage entire Recruitment business)
 
 Under development Modules are as follows:
