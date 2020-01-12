@@ -17,7 +17,7 @@
 
 const dashboardHost = process.env.MATRIXCX_DASHBOARD_HOST || 'localhost'
 const dashboardPort = process.env.MATRIXCX_DASHBOARD_PORT || 3015
-const dashboardDir = process.env.MATRIXCX_DASHBOARD_HOST || 'matrixcx-dashboard'
+const dashboardDir = process.env.MATRIXCX_DASHBOARD_DIR || 'matrixcx-dashboard'
 
 const appHost = process.env.MATRIXCX_WEBSITE_HOST || 'localhost'
 const appPort = process.env.MATRIXCX_WEBSITE_PORT || 3005
