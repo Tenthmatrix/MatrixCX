@@ -38,6 +38,10 @@ MatrixCX and Modules such as MatrixCX-Dashboard & MatrixCX-Website are developed
 
 # How to Install MatrixCX Dashboard in kubernetes cluster in dev environment using kubectl?
 
+Please install kubectl as we will use kubectl for managing kubenetes cluster - https://kubernetes.io/docs/tasks/tools/install-kubectl/
+
+I am on OSX and installed kubectl on via brew install kubectl
+
 # Setup development namespace
 kubectl create -f /Users/balinderwalia/matrixcx/matrixcx-dashboard-kubernetes/kube/matrixcx-dev-namespaces.json
 
