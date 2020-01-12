@@ -51,7 +51,7 @@ kubectl config view
 Find if system pods are running in kubernetes
 kubectl get pods --all-namespaces
 
-Setup Dashboard in kubernetes if you wish to view your kubernetes cluster resources via web dashboard:
+Optionally, Setup Dashboard in kubernetes if you wish to view your kubernetes cluster resources via web dashboard:
 
 kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
 
