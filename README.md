@@ -42,8 +42,22 @@ Please install kubectl as we will use kubectl for managing kubenetes cluster - h
 
 I am on OSX and installed kubectl on via brew install kubectl
 
+Validate if kubectl is install
+kubectl version
+
+Validate if kubernetes cluster is up and running
+kubectl config view
+
+Find if system pods are running in kubernetes
+kubectl get pods --all-namespaces
+
+Setup dashboard in kubernetes if you wish to view your kubernetes cluster resources via web dashboard:
+
+kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+
+
 # Setup development namespace
-kubectl create -f /Users/balinderwalia/matrixcx/matrixcx-dashboard-kubernetes/kube/matrixcx-dev-namespaces.json
+kubectl create -f https://raw.githubusercontent.com/Tenthmatrix/MatrixCX/matrixcx-dashboard-kubernetes/kube/matrixcx-dev-namespaces.json
 
 matrixcx-dev-namespaces.json
 
