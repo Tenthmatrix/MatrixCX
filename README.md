@@ -111,3 +111,4 @@ kubectl apply -f https://raw.githubusercontent.com/Tenthmatrix/Workstation Dashb
 
 # workstation-api
 # workstation-api
+# workstation-admin-docs
